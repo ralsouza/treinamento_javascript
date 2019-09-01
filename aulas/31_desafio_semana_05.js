@@ -29,7 +29,7 @@ function retornaIndiceArray( arr, idx ) {
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-var arr2 = [ 'Rafael', {job: 'Cientista de Dados'}, 36, null, true ]
+var arr2 = [ 'Rafael', {job: 'Cientista de Dados'}, 36, null, true ];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
@@ -71,30 +71,25 @@ os livros.
 */
 function book( nomeLivro ) {
 	var livros = {
-		Programacao: {
+		'Introdução a Programação': {
 			quantidadePaginas: 210,
 			autor: 'Fulano de Tal',
 			editora: 'Minha Editora'
 		},
-		Redes: {
+		'Redes de Computadores': {
 			quantidadePaginas: 312,
 			autor: 'Juca Bala',
 			editora: 'Editora Brasileira'
 		},
-		Databases: {
+		'Bancos de Dados': {
 			quantidadePaginas: 450,
 			autor: 'Foo Bar',
 			editora: 'Editora X'
 		}
 	};
 
-	if ( nomeLivro !== undefined ) {
-		resultado = livros[ nomeLivro ];
-	} else {
-		resultado = livros;
-	}
-
-	return resultado;
+	// Se nomeLivro não for passado, ou seja, false
+	return !nomeLivro ? livros : livros[ nomeLivro ];
 }
 
 
@@ -108,10 +103,9 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-var nomeLivro = 'Databases';
-var nroPaginas = book( nomeLivro ).quantidadePaginas;
+var nomeLivro = 'Bancos de Dados';
 
-console.log( `O livro ${nomeLivro} tem ${nroPaginas} páginas!`);
+console.log( `O livro ${nomeLivro} tem ${ book( nomeLivro ).quantidadePaginas } páginas!`);
 
 
 /*
@@ -119,17 +113,15 @@ Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-var nomeLivro = 'Redes';
-var nomeAutor = book( nomeLivro ).autor;
+var nomeLivro = 'Redes de Computadores';
 
-console.log( `O autor do livro ${nomeLivro} é ${nomeAutor}.`);
+console.log( `O autor do livro ${nomeLivro} é ${ book( nomeLivro ).autor }.`);
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-var nomeLivro = `Programacao`;
-var nomeEditora = book( nomeLivro ).editora;
+var nomeLivro = `Introdução a Programação`;
 
-console.log( `O livro ${nomeLivro} foi publicado pela editora ${nomeEditora}.`)
+console.log( `O livro ${nomeLivro} foi publicado pela editora ${ book( nomeLivro ).editora }.`);
