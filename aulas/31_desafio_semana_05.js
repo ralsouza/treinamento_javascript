@@ -2,17 +2,19 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-
+var arr = [ 'Rafael', {ninja: true}, null, undefined, 36 ];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-
+function retornaArray( arg ) {
+	return arg;
+}
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-
+console.log( retornaArray( arr )[1] );
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -20,18 +22,24 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-
+function retornaIndiceArray( arr, idx ) {
+	return arr[ idx ];
+}
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-
+var arr2 = [ 'Rafael', {job: 'Cientista de Dados'}, 36, null, true ]
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-
+console.log( retornaIndiceArray( arr,0 ) );
+console.log( retornaIndiceArray( arr,1 ) );
+console.log( retornaIndiceArray( arr,2 ) );
+console.log( retornaIndiceArray( arr,3 ) );
+console.log( retornaIndiceArray( arr,4 ) );
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
