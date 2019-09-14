@@ -66,7 +66,7 @@ var num = 10;
 
 while( num <= 20 ) {
 
-	num % 2 != 0 ? console.log( num ) : ` `;
+	num % 2 !== 0 ? console.log( num ) : ` `;
 
 	num++;
 }
@@ -88,5 +88,5 @@ console.log( 'Números ímpares entre 111 e 125:' );
 
 for( var i = 111; i <= 125; i++ ) {
 
-	i % 2 != 0 ? console.log( i ) : ``;
+	i % 2 !== 0 ? console.log( i ) : ``;
 }
