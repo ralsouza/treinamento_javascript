@@ -55,3 +55,53 @@ console.log( add2(3) );
 console.log( adder(5)(8) );
 
 // Passar objetos por parâmetro
+/*
+	var car = {
+		color: 'yellow'
+	};
+
+	function getCarColor(myCar) {
+		return mycar.color;
+	}
+
+	getCarColor(car); // 'yellow'
+*/
+
+var car = {
+	color: 'yellow'
+};
+
+function getCarColor(myCar) {
+	return myCar.color;
+}
+
+console.log( getCarColor(car) );
+
+// Assim como objetos, também podemos passar funções por parâmetro
+/*
+	function showOtherFunction(func) {
+		return func();
+	}
+
+	showOtherFunction(function() { 
+		return 'Functional JS Ninja!';
+	});
+
+	// 'function JS Ninja!'	
+*/
+
+function showOtherFunction(func) {
+	return func();
+}
+
+// Forma 1
+function returnedFunction() {
+	return 'Returned function, form 1';
+}
+
+console.log( showOtherFunction( returnedFunction) );
+
+// Forma 2
+console.log( showOtherFunction(function() {
+	return 'Returned function, form 2';
+}));
