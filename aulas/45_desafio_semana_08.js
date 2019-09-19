@@ -3,38 +3,55 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 `calculateSum`. A função deve receber dois parâmetros e retornar a soma
 desses parâmetros.
 */
-// ?
+var sum = function calculateSum( num1, num2 ) {
+
+	return num1 + num2;
+};
 
 /*
 Invoque a função criada acima, passando dois números que serão somados, e mostre
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
-// ?
+
+var val1 = 3;
+var val2 = 5;
+
+console.log( `A soma de ${ val1 } e ${ val2 } é igual a ${ sum( val1, val2 ) }.` );
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
 "O nome da função que faz a soma é [NOME DA FUNÇÃO]."
 */
-// ?
+
+// A propriedade .name recupera o nome da função que está dentro da 
+// variável sum
+console.log(`O nome da função que faz a soma é ${ sum.name }.`);
 
 /*
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
-// ?
+
+function showName() {
+
+	return `Rafael Lima`;
+}
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-// ?
+
+// É para apenas receber a função, e não invoca-la
+var varShowName = showName;
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-// ?
+
+console.log( `A função ${ varShowName.name } retorna ${ showName() }.` );
 
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
@@ -48,7 +65,18 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-// ?
+function calculator( operator) {
+
+	// Continuar implementando o if
+
+	return function( num1, num2 ) {
+
+				return `Resultado da operação: ${ num1 } ${ operator } ${ num2 } = ${ num1 + num2 }.`;
+			}
+
+}
+
+console.log( calculator(`+`)(2,3) );
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
@@ -72,4 +100,4 @@ correto por parâmetro para cada uma delas.
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
-// ?l
+// ?
