@@ -70,9 +70,9 @@ function calculator( operator) {
 	// Continuar implementando o if
 
 	return function( num1, num2 ) {
-
-				return `Resultado da operação: ${ num1 } ${ operator } ${ num2 } = ${ num1 + num2 }.`;
-			}
+		
+		return `Resultado da operação: ${ num1 } ${ operator } ${ num2 } = ${ num1 + num2 }.`;
+	}
 
 }
 
@@ -100,4 +100,4 @@ correto por parâmetro para cada uma delas.
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
-// ?
+// ?l
