@@ -65,24 +65,46 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-function calculator( operator) {
-
-	// Continuar implementando o if
+function calculator( operator ) {
 
 	return function( num1, num2 ) {
-		
-		return `Resultado da operação: ${ num1 } ${ operator } ${ num2 } = ${ num1 + num2 }.`;
-	}
 
+		var result;
+
+		switch ( operator ) {
+
+			case '+':
+				result = num1 + num2;
+				break;
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			case '%':
+				result = num1 % num2;
+				break;
+			default:
+				// Abaixo declarado o return para parar neste ponto
+				// caso a operação seja inválida.
+				return 'Operação inválida.';
+		}
+
+		return `Resultado da operação: ${ num1 } ${ operator } ${ num2 } = ${ result }.`;
+	};
 }
 
-console.log( calculator(`+`)(2,3) );
+// console.log( calculator(`-`)(2,3) );
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-// ?
+
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
@@ -100,4 +122,4 @@ correto por parâmetro para cada uma delas.
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
-// ?l
+// ?
