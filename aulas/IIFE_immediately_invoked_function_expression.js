@@ -47,4 +47,5 @@ console.log( obj.prop() );
 	console.log( `IFFE Executada!` );
 })();
 
-// Uma das vantagens é forçar o uso do escopo local
+// Uma das vantagens é forçar o uso do escopo local, pois é 
+// uma boa prática mantendo o código coeso.
