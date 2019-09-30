@@ -64,23 +64,28 @@
     /*
     No desafio anterior criamos uma calculadora, usando uma estrutura funcional.
     Agora vamos criar uma outra calculadora, usando uma outra abordagem :D
+
     - Crie uma função `calculator` que recebe dois valores (números)
     por parâmetro.
+
     - Essa função deve retornar uma outra função, que recebe um parâmetro
     chamado `callback`.
+	
     - Esse `callback` será uma função, que passaremos por parâmetro ao invocar
     o retorno de `calculator`.
+
     - O retorno dessa segunda função deve ser a função de `callback` passada
     por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
     que foram passadas para a primeira função `calculator`.
     */
     // ?
+    
 
     /*
     Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
     passando dois números por parâmetro.
     */
-    // ?
+    var sum = calculator(4, 5);
 
     /*
     Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
