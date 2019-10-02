@@ -113,11 +113,18 @@
 
 
     /*
-    Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
+    Agora declare outras variáveis chamadas `subtraction`, `multiplication`,
     `division` e `mod`, e atribua à elas `calculator`, passando números
     diferentes para cada chamada.
     */
-    // ?
+
+    var substraction = calculator(8,4);
+
+    var multiplication = calculator(4,2);
+
+    var division = calculator(12,6);
+
+    var mod = calculator(4,2);
 
     /*
     Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -127,15 +134,31 @@
     chamada.
     */
     console.log( 'O resultado da subtração é:' );
-    // ?
+    
+    console.log( substraction( function( num1, num2 ) {
+
+            return num1 - num2;
+    } ) );
 
     console.log( 'O resultado da multiplicação é:' );
-    // ?
+    
+    console.log( multiplication( function( num1, num2 ) {
+
+            return num1 * num2;
+    } ) );
 
     console.log( 'O resultado da divisão é:' );
-    // ?
+    
+    console.log( division( function( num1, num2 ) {
 
-    console.log( 'O resto da divisão é:' );
-    // ?
+            return num1 / num2;
+    } ) );
+
+    console.log( 'O resto da divisão (módulo) é:' );
+    
+    console.log( mod( function( num1, num2 ) {
+
+            return num1 % num2;
+    } ) );
 
 })();
