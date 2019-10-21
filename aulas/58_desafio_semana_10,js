@@ -57,7 +57,9 @@
 	// Opção 2 - Retornando o equivalente booleano, pois uma function é truthy
 	function isOperatorValid( operator ) {
 
-		// Se o operador não for encontrado, retornará um false
+		// Se o operador não for encontrado, retornará um false, 
+		// pois o equivalente booleando de undefined é falsy.
+		// Funções retornam o equivalente booleano Thuthy.
 		return !!operation[operator];
 	}
 
@@ -76,7 +78,16 @@
 	operador passado para a função "calculator", e passando para esse método
 	os dois parâmetros da função de retorno de "calculator".
 	*/
-	// ?
+	function calculator( operator ){
+
+		if( !isOperatorValid( operator ) ) {
+			return false;
+		}
+
+		return operation[ operator ];
+	}
+
+	console.log('Retorno Calculator: ' + calculator('-')(4, 3) );
 
 	/*
 	Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
