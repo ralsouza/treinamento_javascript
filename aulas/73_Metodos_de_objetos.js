@@ -50,3 +50,63 @@ objString = JSON.stringify( obj );
 
 console.log( typeof(objString) );
 
+/*
+	Transformar a string em objeto novamente
+
+	JSON.parse(obj)
+*/
+
+objJSON = JSON.parse(objString);
+
+console.log( typeof(objJSON) );
+
+/*
+	ARRAYS
+*/
+
+// Adicionar itens por indice
+var arr = [];
+
+arr[0] = 10;
+
+arr[1] = 5;
+
+arr[2] = 'oito';
+
+console.log( arr );
+
+console.log( arr[2] );
+
+// O JScript adiciona na 12o
+arr[12] = 'doze'
+
+console.log( arr );
+
+// Adicionar o final do array
+arr.push('treze');
+
+console.log(arr);
+
+// Remover o último item do array
+arr.pop()
+
+console.log(arr);
+
+// Novo array
+var arr = [];
+
+arr.push('arroz');
+
+arr.push('feijao');
+
+arr.push('macarrao');
+
+console.log(arr);
+
+/*
+	Remover o último item do array e 
+	adicioar o item removido em uma variável
+*/
+var lastValue = arr.pop();
+
+console.log(lastValue);
