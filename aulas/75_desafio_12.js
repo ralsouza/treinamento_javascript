@@ -40,9 +40,18 @@
 		`pages`: Number
 	*/
 	books.push( 
-		{name: 'Livro 1', pages: 300},
-		{name: 'Livro 2', pages: 500},
-		{name: 'Livro 3', pages: 250}
+		{ 
+			name: 'Livro 1',
+		  	pages: 300
+		},
+		{
+			name: 'Livro 2',
+			pages: 500
+		},
+		{
+			name: 'Livro 3',
+			pages: 250
+		}
 	);
 
 	console.log( '\nLista de livros:' );
