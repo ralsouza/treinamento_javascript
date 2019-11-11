@@ -103,7 +103,7 @@
 
 	console.log('\nAs propriedades no formato "[PROPRIEDADE]: [VALOR]": (Forma dinâmica)');
 
-	for( var i = 0; i < books.length; i++) {
+	for( var i = 0; i < books.length; i++ ) {
 
 		for( prop in books[i] ) {
 
