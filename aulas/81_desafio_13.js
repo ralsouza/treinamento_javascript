@@ -70,37 +70,44 @@
 	/*
 		Crie um novo array chamado `nordeste`, que tenha os estados do nordeste.
 	*/
-	// ?
+	var nordeste = ['Maranhão','Piaui','Ceará','Rio Grande do Norte','Paraíba','Pernambuco','Alagoas','Sergipe'];
 
 	/*
 		Mostre no console os estados do nordeste.
 	*/
 	console.log( '\nEstados do Nordeste:' );
-	// ?
+	
+	console.log( nordeste );
 
 	/*
 		Remova de `brasil` os estados do `sudeste`, colocando-os em uma variável
 		chamada `newSudeste`.
 	*/
-	// ?
+	// Apartir do indice 5, remover os quatro próximos itens
+	var newSudeste = brasil.splice(5,4);
+
+	// ou remover tudo apartir do indice 5
+	// var newSudeste = brasil.splice(5,4);
 
 	/*
 		Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
 		ficar no mesmo nível que os estados já existentes, não em um array separado.
 	*/
-	// ?
+	
 
 	/*
 		Mostre no console os estados em `newSudeste`.
 	*/
 	console.log( '\nEstados em newSudeste:' );
-	// ?
+
+	console.log( newSudeste );
 
 	/*
 		Mostre no console os estados do `brasil`.
 	*/
 	console.log( '\nAlguns estados do Brasil:' );
-	// ?
+	
+	console.log( brasil );
 
 	/*
 		Usando forEach, percorra o array `brasil` e gere um novo array chamado
