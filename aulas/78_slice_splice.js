@@ -48,6 +48,7 @@ console.log( arr.push(4,5,6,7) );
 console.log( arr );
 
 // Remove 2, 3, 4 values from array
+// .splice( <start index>, <how many elements will be removed> )
 console.log( arr.splice(1,3) );
 
 // The result of splice()
