@@ -93,7 +93,7 @@
 		Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
 		ficar no mesmo nível que os estados já existentes, não em um array separado.
 	*/
-	
+	brasil = brasil.concat( nordeste );
 
 	/*
 		Mostre no console os estados em `newSudeste`.
@@ -116,7 +116,17 @@
 		- `id`: que será o índice do array `brasil`,
 		- `estado`: que será o estado do array `brasil`.
 	*/
-	// ?
+
+	newBrasil = [];
+
+	console.log( '\n*** Início forEach ***')
+
+	brasil.forEach( function( item,index ) {
+
+		newBrasil.push( {id: index, estado: item} );
+	} );
+
+	console.log( newBrasil );
 
 	/*
 		Mostre o array `newBrasil` no console
