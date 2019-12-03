@@ -194,7 +194,10 @@
 		Filtre o array criado acima, retornando somente os estados que tiverem
 		ID par. Atribua o valor à uma variável chamada `filter`.
 	*/
-	var filter = 
+	var filter = map.filter( function( item ) {
+
+		return item.id % 2 === 0;
+	});
 
 	/*
 		Mostre o array filtrado acima no console.
