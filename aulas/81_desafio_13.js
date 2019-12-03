@@ -173,25 +173,33 @@
 		- "[ESTADO] pertence ao Brasil."
 		Atribua o novo array a uma variável chamada `map`.
 	*/
-	// CONTINUAR DAQUI
-	var map = brasil.map()
+
+	var map = [];
+
+	var map = newBrasil.map( function( item, index ) {
+
+		return {
+			id: item.id + 1,
+			estado: item.estado + ' pertence ao Brasil.'
+		};
+	});
 
 	/*
 		Mostre no console o array criado acima:
 	*/
 	console.log( '\nnewBrasil agora com mais informações:' );
-	// ?
+	console.log( map );
 
 	/*
 		Filtre o array criado acima, retornando somente os estados que tiverem
 		ID par. Atribua o valor à uma variável chamada `filter`.
 	*/
-	// ?
+	var filter = 
 
 	/*
 		Mostre o array filtrado acima no console.
 	*/
 	console.log( '\nEstados com ID par:' );
-	// ?
+	console.log( filter );
 
 })();
