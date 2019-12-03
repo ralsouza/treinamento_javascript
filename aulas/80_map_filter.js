@@ -2,7 +2,7 @@
 	.map()
 
 	Recebe uma função como parâmetro, que percorrerá todo o array, retornando 
-	um novo array. O array original não é alterado.
+	um novo array com as alterações. O array original não é alterado.
 
 	A diferença com o forEach(), é que o map() já retorna o array, ao contrário do forEach()
 */
