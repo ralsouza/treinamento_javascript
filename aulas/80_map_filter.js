@@ -47,7 +47,7 @@ console.log( newArr );
 /*
 	.filter()
 
-	Gera um novo array, filtrando os itens do array
+	Returna um novo array, retornando os itens já filtrados.
 */
 
 var filter = arr.filter( function( item, index, array ) {
