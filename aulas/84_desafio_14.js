@@ -14,7 +14,10 @@
 	console.log( 'Number Objects Array:' );
 	var numberObjects = [];
 
-	// Usar um for para empurrar os números nos objetos.
+	for( var i = 1; i <= 10; i++ ) {
+
+		numberObjects.push( { number: i } );
+	}
 
 	console.log( numberObjects );
 
