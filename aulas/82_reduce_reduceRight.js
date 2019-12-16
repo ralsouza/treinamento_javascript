@@ -12,7 +12,7 @@ var arr = [ 1, 2, 3, 4, 5 ];
 var reduce = arr.reduce( function( valorAcumulado, valorAtual, index, array ) {
 
 	return valorAcumulado + valorAtual;
-}, 0 ); // Este 0 não é obrigatório, mas existem casos que é interessante usar
+}, 0 ); // // Inicia o valor acumulado em zero, este argumento não é obrigatório, mas existem casos que é interessante usar
 
 console.log( reduce );
 
