@@ -12,8 +12,10 @@
 		Mostre esse array no console.
 	*/
 	console.log( 'Number Objects Array:' );
+
 	var numberObjects = [];
 
+	// Como não existe um array para se basear, usaremos o for()
 	for( var i = 1; i <= 10; i++ ) {
 
 		numberObjects.push( { number: i } );
@@ -26,7 +28,19 @@
 		números do array criado acima. Mostre esse novo array no console.
 	*/
 	console.log( '\nJust Numbers:' );
-	// ?
+	
+	/*
+		Como já existe um array para se basear, usaremos a função map(), 
+		que passa por todos os elementos do array e retorna um array.
+
+		Apenas será usado o parâmetro item.
+	*/
+	var justNumbers = numberObjects.map( function( item ) {
+
+		return item.number;
+	});
+
+	console.log( justNumbers );
 
 	/*
 		Crie um novo array chamado `justMod2Or3`, que receberá do array criado acima
@@ -34,7 +48,14 @@
 		no console.
 	*/
 	console.log( '\nJust module of division by 2 or 3:' );
-	// ?
+	
+	var justMod2Or3 = justNumbers.filter( function( item ) {
+
+		// Se alguma das condições abaixo for verdadeira, o item do array será retornado	
+		return item % 2 === 0 || item % 3 === 0;
+	});
+
+	console.log( justMod2Or3 );
 
 	/*
 		Declare uma variável chamada operation que receba, do array criado acima,
