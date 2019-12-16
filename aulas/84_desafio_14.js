@@ -66,7 +66,13 @@
 		Mostre o resultado no console.
 	*/
 	console.log( '\nOperation:' );
-	// ?
+	
+	var operation = justMod2Or3.reduce( function( valorAcumulado, valorAtual ) {
+
+		return (valorAcumulado + 1) * valorAtual;
+	}, 0); // Inicia o valor acumulado em zero, com valor atual 2
+
+	console.log( operation );
 
 	/*
 		Faça o mesmo cálculo passado acima, mas começando do último item para o
@@ -74,7 +80,13 @@
 		console.
 	*/
 	console.log( '\nOperation 2:' );
-	// ?
+	
+	var operation2 = justMod2Or3.reduceRight( function( valorAcumulado, valorAtual ) {
+
+		return ( valorAcumulado + 1 ) * valorAtual;
+	}, 0); // Inicia o valor acumulado em zero, com valor atual 10
+
+	console.log( operation2 );
 
 	/*
 		Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
