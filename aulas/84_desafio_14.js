@@ -89,7 +89,7 @@
 	console.log( operation2 );
 
 	/*
-		Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
+		Crie um array chamado `name`. Cada elemento desse array deve ser UMA SÍLABA
 		do seu nome. Vamos reduzir esse array, juntando todas as sílabas, mas usando
 		a "língua do P".
 		PS.: Lembra da língua do "P"? Não? A língua do "P" é uma brincadeira
@@ -97,20 +97,38 @@
 		falada, como se você estivesse falando em código xD
 	*/
 	console.log( '\nSeu nome na língua do "P":' );
-	// ?
+	
+	var name = ['Ra','fa','el'];
+
+	var strArr = name.reduce( function( valorAcumulado, valorAtual ) {
+
+		return valorAcumulado + 'P' + valorAtual;
+	}, ''); // Inicar a string vazia para não dobrar o P inicial, pois o valorAcumulado inicialmente será vazio
+
+	console.log( strArr );
 
 	/*
 		Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
 		e atribuirá o seu nome invertido (usando o array criado acima).
 	*/
 	console.log( '\nInversed Name:' );
-	// ?
+	
+	var inverseName = name.reduceRight( function( valorAcumulado, valorAtual ) {
+
+		return valorAcumulado + valorAtual;
+	});
+
+	console.log( inverseName );
+
+	// Ou poderia ser com inverse().join('')
+	console.log( name.reverse().join('') );
 
 	/*
 		Mostre no console o array `numberObjects`.
 	*/
-	console.log( '\nNumber objects' );
-	// ?
+	console.log( '\nNumber objects:' );
+	
+	console.log( numberObjects );
 
 	/*
 		Verifique se existem em algum índice de numberObjects um objeto ìgual a
@@ -122,7 +140,8 @@
 		o que acontece ;)
 	*/
 	console.log( '\nExiste um { number: 2 } em numberObjects?' );
-	// ?
+	// Continuar daqui
+
 
 	/*
 		Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
