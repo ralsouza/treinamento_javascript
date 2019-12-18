@@ -140,8 +140,25 @@
 		o que acontece ;)
 	*/
 	console.log( '\nExiste um { number: 2 } em numberObjects?' );
-	// Continuar daqui
+	
+	/*
+		Se comparar diretamente o objeto { number: 2 }, buscando no indexOf pelo objeto { number: 2 }, estaremos
+		comparando dois objetos diferentes. Pois o JavaScript cria um novo objeto na comparação no indexOf.
 
+		Para resolver, é preciso atribuir o objeto desejado do array em uma variável para atribuir a referência deste objeto 
+		nesta variável.
+	*/
+
+	// Passar por referência o objeto { number: 2 } para a variável
+	var objRef = numberObjects[1];
+
+	if( numberObjects.indexOf( objRef ) > -1 ) {
+
+		console.log( 'Existe um objeto { number: 2 } em numberObjects!' );
+	} else {
+
+		console.log( 'Não existe um objeto { number: 2 } em numberObjects :(' );
+	}
 
 	/*
 		Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
