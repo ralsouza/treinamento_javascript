@@ -30,7 +30,7 @@
 
     this.getFullName = function getFullName() {
 
-      return this.name + ' ' + this.lastname;
+      return this.name + ' ' + this.lastName;
     };
 
     this.getAge = function getAge() {
@@ -57,20 +57,36 @@
   */
   console.log( 'Novas pessoas criadas à partir de Person:' );
   
-  
+  var rafael = new Person('Rafael', 'Lima', 36 );
+
+  var cristiane = new Person('Cristiane', 'Lima', 35);
+
+  var mila = new Person('Mila', 'Lima', 4);
+
+  // Exibição do nome
+  console.log( rafael );
+
+  console.log( cristiane );
+
+  console.log( mila );
 
   /*
     Mostre no console o nome completo de cada pessoa.
   */
   console.log( '\nNomes das pessoas:' );
-  // ?
+  console.log( rafael.getFullName() );
+  console.log( cristiane.getFullName() );
+  console.log( mila.getFullName() );
 
   /*
     Mostre no console as idades de cada pessoa, com a frase:
     - "[NOME COMPLETO] tem [IDADE] anos."
   */
   console.log( '\nIdade das pessoas:' );
-  // ?
+
+  console.log( rafael.getFullName(), 'tem' ,rafael.getAge(), 'anos.' );
+  console.log( cristiane.getFullName(), 'tem', cristiane.getAge(), 'anos.' );
+  console.log( mila.getFullName(), 'tem', mila.getAge(), 'anos.' );
 
   /*
     Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
@@ -78,5 +94,11 @@
     - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
   */
   console.log( '\nNova idade das pessoas:' );
-  // ?
+  
+  // O retorno this invoca o próprio objeto, logo é possível encadear os objetos
+  // O encadeamento pode ser usado desde que seja retornado um objeto
+  console.log( rafael.getFullName(), 'agora tem', rafael.addAge(3).getAge(), 'anos.' );
+  console.log( cristiane.getFullName(), 'agora tem', cristiane.addAge(2).getAge(), 'anos.');
+  console.log( mila.getFullName(), 'agora tem', mila.addAge(1).getAge(), 'anos.' );
+
 })();
