@@ -38,7 +38,12 @@
       return this.age;
     };
 
-    // Para conseguir isso, usaremos o arguments
+    /*
+      addAge - esse método não deverá ter nenhum parâmetro, mas ao invocá-lo
+      iremos passar um único argumento, que é a quantidade de anos que devem ser
+      adicionados à idade original (age). Esse método deverá retornar o objeto
+      que será instanciado, para conseguir isso usaremos o arguments.
+    */
     this.addAge = function addAge() {
 
       this.age += arguments[0];
