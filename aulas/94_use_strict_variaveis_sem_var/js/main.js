@@ -4,8 +4,8 @@
 	Informa o browser que apartir do comando, 
 	tudo estará em escopo restrito.
 
-	Este comando, resolve os problemas de declaração
-	de variáveis sem a palavra chave var.
+	Não permite a declaração de variáveis sem
+	a palavra chave var.
 */
 
 (function() {
