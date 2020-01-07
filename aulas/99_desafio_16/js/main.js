@@ -21,7 +21,16 @@
 	
 	var name = 'Rafael';
 
-	for( var i = 0; i < name.length; i++ ) {
+	/*
+		Como o tamanho do comprimento desta string será sempre o mesmo, neste 
+		caso é mais performático fixar a quantidade de loops em uma variável 
+		usando o operador vírgula, assim o JS não precisa recalcular o tamanho do 
+		objeto a cada iteração.
+
+		Se o comprimeiro de length variasse a cada iteração, seria melhor a forma
+		tradicional: for( var i = 0; i < name.length; i++ ) {}
+	*/
+	for( var i = 0, len = name.length; i < len; i++ ) {
 
 		console.log( name[i], 'é a', i + 1, 'ª letra do meu nome.' );
 	}
