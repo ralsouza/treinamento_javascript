@@ -6,6 +6,8 @@
 		3. Crie um arquivo index.html e adicione esse script à ele.
 	*/
 
+	'use strict';
+
 	/*
 		Declare uma variável chamada `name` que receba seu primeiro nome.
 		Mostre no console todas as letras do seu nome separadas, com a frase:
@@ -16,8 +18,14 @@
 		E assim por diante, até a última.
 	*/
 	console.log( 'As letras do seu nome:' );
-	// ?
+	
+	var name = 'Rafael';
 
+	for( var i = 0; i < name.length; i++ ) {
+
+		console.log( name[i], 'é a', i + 1, 'ª letra do meu nome.' );
+	}
+	
 	/*
 		- Declare uma variável chamada `fullName`, que receba seu nome completo,
 		escrito no formato de slug (caixa baixa e palavras separadas por um traço).
