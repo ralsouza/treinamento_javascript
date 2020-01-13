@@ -69,6 +69,19 @@
 	console.log( removeSlug(fullName) );
 
 	/*
+		// Outra opção:
+
+		var fullName = 'rafael-lima-de-souza';
+
+		var newFullName = fullName.split( '-' ).map(function(name) {
+			return name.charAt(0).toUpperCase() + name.slice(1);
+		}).join( ' ' );
+
+		console.log( fullName );
+		console.log( newFullName );
+	*/
+
+	/*
 		var teste = newName(fullName)
 
 		console.log(teste);
