@@ -48,7 +48,41 @@
 		console.log para cada formato.
 	*/
 	console.log( '\nNome convertido à partir de um slug:' );
-	// ?
+	
+	var fullName = 'rafael-lima-de-souza';
+
+	var newName = '';
+
+	function removeSlug( name ) {
+
+		var name = name.split('-');
+
+		name.forEach( function( item, index ) {
+
+			newName += item.charAt(0).toUpperCase() + item.slice(1) + ' ';
+		});
+
+		return newName;
+	}
+
+	console.log( fullName );
+	console.log( removeSlug(fullName) );
+
+	/*
+		var teste = newName(fullName)
+
+		console.log(teste);
+
+		var nome = '';
+
+		teste.forEach( function( item, index ) {
+
+			nome += item.charAt(0).toUpperCase() + item.slice(1) + ' ';
+		});
+
+		console.log(nome)
+	*/
+
 
 	/*
 		- Crie um array com 5 nomes. Reduza esses nomes a uma única string, separando
