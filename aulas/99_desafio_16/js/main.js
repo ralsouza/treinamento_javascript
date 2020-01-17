@@ -51,13 +51,13 @@
 	
 	var fullName = 'rafael-lima-de-souza';
 
-	var newName = '';
-
 	function removeSlug( name ) {
 
-		var name = name.split('-');
+		var newName = '';
 
-		name.forEach( function( item, index ) {
+		var oldName = name.split('-');
+
+		oldName.forEach( function( item, index ) {
 
 			newName += item.charAt(0).toUpperCase() + item.slice(1) + ' ';
 		});
