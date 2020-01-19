@@ -125,14 +125,20 @@
 		Mostre o resultado no console.
 	*/
 	console.log( '\nEra "Roberto", agora é:' );
-	// ?
+	
+	console.log( 'Roberto'.replace('to','ta') );
 
 	/*
 		Mostre no console a parte "nando" da string "Fernando". Use o método que
 		faz a busca do final para o início da string.
 	*/
 	console.log( '\nParte de uma string:' );
-	// ?
+	
+	var name = 'Fernando';
+
+	console.log( name.slice(-5) );
+
+	console.log( name.substring(3));
 
 	/*
 		Declare uma variável chamada `myName`, que receba o seu primeiro nome,
