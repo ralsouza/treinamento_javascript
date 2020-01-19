@@ -108,10 +108,15 @@
 	*/
 	console.log( '\nMeus amigos:' );
 	
-	var names = ['Rafael','Cristiane','Mila','Kiko','Duda'];
+	var names = ['Rafael','Cristiane','Mila','Kiko','Duda','Fulano'];
 
-	// Continuar daqui
-	var friends = names.join(', ').lastIndexOf(',');
+	var friends = names.reduce( function( strAcc, strAct, index ) {
+
+		// Check if is the last index of array
+		var sep = names.length - 1 === index ? ' e ' : ', ';
+
+		return strAcc + sep + strAct;
+	}).concat( ' são meus amigos.' );
 
 	console.log(friends);
 
