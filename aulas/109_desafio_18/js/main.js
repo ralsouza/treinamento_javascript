@@ -7,8 +7,6 @@
 
 	'use strict';
 
-	console.log('deu certo');
-
 	/*
 		Crie uma função chamada `cleanCPF`, que receba um CPF por parâmetro, e
 		retorne esse CPF limpo (somente os números).
@@ -20,7 +18,18 @@
 		- "101.123-131x32"
 	*/
 	console.log( 'Limpando CPFs:' );
-	// ?
+	
+	var cpf = ['049-214 3421-1','210.458.522-05','735 500 794 - 22','101.123-131x32'];
+
+	function cleanCPF(cpf) {
+
+		return cpf.replace(/\D/g,'');
+	}
+
+	cpf.forEach( function(cpf) {
+
+		console.log( cleanCPF(cpf) );
+	})
 
 	/*
 		Usando os CPFs limpos acima, deixe-os com a formatação correta de CPF.
@@ -28,7 +37,11 @@
 		Mostre o resultado no console.
 	*/
 	console.log( '\nFormatando CPFs corretamente:' );
-	// ?
+
+	cpf.forEach( function(cpf) {
+
+		console.log( cleanCPF(cpf).replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4') );
+	})
 
 	/*
 		Crie uma expressão regular que faça match com as palavras "junho" ou "julho",
