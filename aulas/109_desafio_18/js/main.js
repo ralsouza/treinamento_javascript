@@ -67,14 +67,21 @@
 	/*
 		Crie uma expressão regular que faça o match com a abertura de uma tag
 		HTML qualquer.
+
 		Ex.: "<div>", "<section>", "<blockquote>".
+
 		Use o método match e faça o teste com a marcação abaixo:
 		"<div><section><blockquote>Texto <img /></blockquote></section></div>"
 		O resultado deve ser:
 		["<div>", "<section>", "<blockquote>"]
 	*/
 	console.log( '\nMatch com a abertura de uma tag HTML:' );
-	// ?
+
+	var html = '<div><section><blockquote>Texto <img /></blockquote></section></div>';
+
+	var openTags = html.match(/<\w+>/gi);
+
+	console.log( openTags );
 
 	/*
 		Crie uma expressão regular que faça o match com uma tag HTML vazia, casando
