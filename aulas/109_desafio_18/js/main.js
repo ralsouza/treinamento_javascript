@@ -93,7 +93,12 @@
 		["<li></li>", "<li></li>", "<span></span>"]
 	*/
 	console.log( '\nMatch com tags HTML vazias (abertura e fechamento da tag):' );
-	// ?
+	
+	var html = '<div><ul><li></li><li></li><li><span></span></li></ul></div>';
+
+	var tags = html.match(/<\w+><\/\w+>/gi);
+
+	console.log( tags );
 
 	/*
 		Vamos complicar um pouco agora :D
