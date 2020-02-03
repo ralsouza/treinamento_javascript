@@ -46,16 +46,23 @@
 	/*
 		Crie uma expressão regular que faça match com as palavras "junho" ou "julho",
 		usando o mínimo de caracteres possíveis na regex.
+
 		Para garantir que a regex funciona, teste-a usando o método match. Se houver
 		o match, o método retorna um array com os matches. Caso contrário, ele
 		retornará null.
+
 		Mostre no console o resultado do match para a frase:
 		"Os meses de janeiro, junho e julho começam com a letra j."
 		O resultado deve ser:
 		["junho", "julho"]
 	*/
 	console.log( '\nMatch com as palavras "junho" ou "julho" para a frase "Os meses de janeiro, junho e julho começam com a letra j.":' );
-	// ?
+	
+	var phrase = 'Os meses de janeiro, junho e julho começam com a letra j.';
+
+	var months = phrase.match(/ju[nl]ho/gi);
+
+	console.log( months );
 
 	/*
 		Crie uma expressão regular que faça o match com a abertura de uma tag
