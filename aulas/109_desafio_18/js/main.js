@@ -123,5 +123,9 @@
 		corretas, para depois aplicar no código ;)
 	*/
 	console.log( '\nFazer replace dos textos das tags:' );
-	// ?
+
+	html = '<h1>Título da página</h1><p>Este é um parágrafo</p><footer>Rodapé</footer>';
+
+	// Esta forma não funciona para javascript
+	console.log( html.match( /<\w+>(.*?)<\/\w+>/g ) );
 })();
