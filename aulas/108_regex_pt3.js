@@ -2,7 +2,13 @@
 	\s: Character to blank spaces
 	\n: Idenfifies line breaks
 	\t: Tabulation
-	. : Any character, except line break
+
+	Quantifiers define quantities:
+
+	n. : Any character, except line break
+	n+ : Matches any string that contains at least one n. Equivalent to {1,}
+	n* : Matches any string that contains zero or more occurrences of n
+	n? : Matches any string that contains zero or one occurrences of n
 */
 
 /*
@@ -25,7 +31,7 @@
 /*
 	\D
 
-	Match any character that aren't digits.
+	Nagation of \d, matching any character that aren't digits.
 */
 
 /*
