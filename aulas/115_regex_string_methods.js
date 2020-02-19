@@ -1,33 +1,60 @@
 /*
-	.match()
-
-	Returns an array of matches or null if no match is found
+	Making regular expressions with constructor RegExp()
 */
 
-console.log( 'rafael'.match(/rafa/) );
+console.log( '# Pass RegExp as string to constructor');
 
-console.log( 'rafael'.match(/a/g) );
+var regex = new RegExp( 'rafa' );
+
+console.log( regex );
+
+console.log( 'rafael'.match( regex ) );
+
+console.log( '# Getting only numbers from name variable' );
+var name = 'rafa123el';
+
+console.log( name );
+
+// Is necessary to scape with double slash
+var regex = RegExp( '\\d' );
+
+console.log( 'Regex with scaping:' );
+console.log( regex );
 
 /*
-	.replace( regexp, string )
+	.text( regexp )
 
-	Replace of matches by a string.
+	Return true if match exists.
 */
+
+var regex = RegExp( '\\d' );
+
+console.log( regex.test( name ) );
 
 /*
-	.split( regexp )
+	.exec(string)
 
-	Using REGEX to make spliting.
+	Go through a string with the match, incrementing the counter until it returns null
+
 */
+console.log( '# .exec(string) ');
 
-// Split the string where there is no digit
-console.log( '111.222.333-44'.split( /\D/ ) );
+var regex = /\d/g;
+
+var name = 'rafa123el';
+
+console.log( regex.exec( name ) );
 
 /*
-	.search( regexp )
-
-	Searchs in a string by regex, returning the index of position 
-	for first match. Like .indexOf()
+	Making a tab in strings
 */
 
-console.log( '111.222.333-44'.search( /\./ ) );
+console.log( 'Two tabs:\t\t', 'here');
+
+/*
+	Escaping simple or double quotes 
+*/
+
+console.log( 'Julio\'s bar');
+
+console.log( "Julio\"s bar");
